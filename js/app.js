@@ -60,13 +60,13 @@ function changeBackColor(color,box2) {
     }
 }
 
-/*function return numbersOnly(event) {
+function return numbersOnly(event) {
     var iKeyCode = (event.which) ? event.which : event.keyCode
     if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
         return false;
 
     return true;
-}    */
+}    
 
 function addAdjacent(para2,Text) {
     var elem = document.getElementById(para2);
