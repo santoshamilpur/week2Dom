@@ -60,16 +60,50 @@ function changeBackColor(color,box2) {
     }
 }
 
+function numbersOnly(e, t) {
 
-function addAdjacent(para2,Text) {
-    var elem = document.getElementById(para2);
-        elem.innerHTML += Text;
+    try {
+
+        if (window.event) {
+
+            var charCode = window.event.keyCode;
+
+        }
+
+        else if (e) {
+
+            var charCode = e.which;
+
+        }
+
+        else { return true; }
+
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+
+            return false;
+
+        }
+
+        return true;
+
+    }
+
+    catch (err) {
+
+        alert(err.Description);
+
+    }
+
+}
+function addAdjacent() {
+    document.getElementById("para2").innerHTML += "I got generated on the fly...";
 }
 
 function removePara() {
-
+    document.getElementById('para4').style.display = "none";
 }
 
-function animatePara() {
-
+function animatePara(e) {
+   var e= document.getElementById("box5")
+   e.style.left = parseInt(e.style.left) + 10 + 'px';
 }
